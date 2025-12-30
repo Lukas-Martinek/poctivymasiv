@@ -1,0 +1,246 @@
+@media screen and (max-width: 1200px) {
+.contact_form {
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-rows: repeat(1, 1fr);
+    padding-bottom: 130px;
+}
+#o_mne h2 {
+    padding-top: 20px;
+}
+
+}
+
+@media screen and (max-width: 940px) {
+
+
+  .gallery-masonry a {
+    width: 50%; /* 3 sloupce */
+    padding: 5px;
+  }
+  .foto_container {
+    grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  }  
+  .menu {
+        display: none; /* Schování desktop menu */
+    }
+    .mobile-header {
+        display: flex; /* Zobrazení mobilního headeru */
+    }
+    header {
+        padding-top: 0;
+    }
+    h2 {
+        font-size: 40px;
+    }
+
+    .contact_form {
+        grid-template-columns: 1fr; /* Jeden sloupec */
+        grid-template-rows: auto auto; /* Dva řádky */
+      }
+    
+      /* Druhý blok nahoru */
+      .contact_form_part:first-child {
+        grid-area: 2 / 1 / 3 / 2; /* Přesun na druhý řádek */
+      }
+    
+      /* První blok dolů */
+      .contact_form_part:last-child {
+        grid-area: 1 / 1 / 2 / 2; /* Přesun na první řádek */
+      }
+      h1 {
+        font-size: 40px;
+        padding-top: 100px;
+        
+      }
+
+      .produkty_header h1, .akce_header h1, .portrety_header h1, .umelecka_header h1 {
+        padding-bottom: 150px;
+      }
+      .video_header {
+        padding-bottom: 100px;
+      }
+      .claim {
+        font-size: 30px;
+        
+      }
+      header {
+        padding-bottom: 70px;
+      }
+      #o_mne {
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+      }
+      #o_mne h3 {
+        font-size: 38px;
+        margin-bottom: 20px;
+        margin-top: 5px;
+      }
+      .vyber {
+        margin-top: 20px;
+      }
+      form {
+        padding: 20px;
+      }
+      footer {
+        padding-top: 30px;
+      }
+      .contact_form_part2 h3 {
+        font-size: 40px;
+        padding-left: 20px;
+      }
+      .contact_form_part2 p {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .proj_container {
+        grid-template-columns: 1fr; /* Jeden sloupec */
+        grid-template-rows: repeat(4, auto); /* Čtyři řádky pro čtyři prvky */
+        gap: 0;
+      }
+      .proj_card {
+        height: 300px;
+        border-radius: 0;
+      }
+      .video_container {
+        grid-template-columns: 1fr;
+  
+        grid-auto-rows: 500px; /* nebo třeba minmax(300px, 500px) */
+  
+        
+      }
+      .video_container h3 {
+        font-size: 30px;
+      }
+      .text_overlay{
+        font-weight: 200;
+      }
+      .umelecka_video {
+        grid-column: span 1;
+      }
+
+      .foto_header p {
+        font-size: 17px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+      }
+      .video_header p {
+        font-size: 17px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 80px;
+      }
+      .reklama-content h2{
+        font-size: 40px;
+        padding-left: 20px;
+      }
+      .reklama-content p {
+        padding-left: 20px;
+        font-size: 16px;
+      }
+      .reklama-odkazy {
+        justify-content: center;
+      }
+      .card-container {
+        flex-direction: column;
+        height: auto;
+      }
+      .proj_container {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .o_mne_container {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 50px;
+      }
+      .o_mne_container p {
+        margin-bottom: 0;
+      }
+      .proj_container div {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .proj_container h2{
+        font-size: 38px;
+      }
+      .proj_podnadpis {
+        font-size: 18px;
+      }
+      }
+    @media screen and (max-width: 700px) {
+        .vyber {
+            display: inline;
+        }
+        .vyber_foto, .vyber_video {
+            height: 400px;
+        }
+        .foto_header h1 {
+          font-size: 70px;
+        }
+
+        .foto_part.active {
+          filter: grayscale(0%);
+      }
+      .foto_part p {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .foto_part h3 {
+       font-size: 40px;
+      }
+      .foto_header {
+        padding-bottom: 200px;
+      }
+      .foto_part {
+        padding-top: 170px;
+        padding-bottom: 170px;
+      }
+      .button_container {
+        flex-direction: column; /* Tlačítka pod sebou na mobilu */
+        gap: 10px; /* Menší mezera mezi tlačítky na mobilu */
+      }
+
+    }
+
+
+  
+
+  @media (min-width: 768px) {
+    .grain-glow-content {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .grain-glow-text, 
+    .grain-glow-image {
+        flex: 1;
+    }
+}
+@media screen and (min-width: 940px) {
+  .video_header .menu,
+.video_header .logo,
+.video_header h1,
+.video_header p,
+.video_header .mobile-header,
+.video_header .mobile-menu {
+  position: relative;
+  z-index: 2;
+}
+
+.reklama-content {
+  padding-left: 120px;
+}
+}
+
+@media screen and (min-width: 1500px) {
+.foto_part {
+    padding-top: 300px;
+    padding-bottom: 300px;
+
+
+ }
+}

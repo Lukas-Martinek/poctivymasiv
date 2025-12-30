@@ -12,7 +12,7 @@
   --secondary-color: #C69A68;
   
   /* Další užitečné barvy z tvého webu pro sjednocení */
-  --dark-bg: #081828; 
+  --dark-bg: var(--secondary-color); 
   --light-bg: #f9f9f9;
 }
 
@@ -75,7 +75,7 @@ button:focus,
 select {
   -webkit-writing-mode: horizontal-tb !important;
   text-rendering: auto;
-  color: #081828;
+  color: var(--secondary-color);
   letter-spacing: normal;
   word-spacing: normal;
   text-transform: none;
@@ -135,7 +135,7 @@ h5,
 h6 {
   font-weight: 600;
   margin: 0px;
-  color: #081828;
+  color: var(--secondary-color);
 }
 
 h1 a,
@@ -1184,7 +1184,7 @@ ol {
   box-shadow: 0 1rem 3rem rgba(35, 38, 45, 0.15) !important;
   -webkit-transform: translate3d(0, -5px, 0);
   transform: translate3d(0, -5px, 0);
-  background-color: #081828;
+  background-color: var(--secondary-color);
 }
 
 /* Overlay */
@@ -1200,7 +1200,7 @@ ol {
   width: 100%;
   height: 100%;
   opacity: 0.4;
-  background: #081828;
+  background: var(--secondary-color);
   content: "";
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -1243,7 +1243,7 @@ ol {
 
 .pagination .pagination-list li a {
   background: #fff;
-  color: #081828;
+  color: var(--secondary-color);
   font-weight: 400;
   font-size: 14px;
   border-radius: 5px;
@@ -1313,7 +1313,7 @@ ol {
 
 .button .btn:hover {
   color: #fff;
-  background-color: #081828;
+  background-color: var(--secondary-color);
   -webkit-box-shadow: 0px 4px 4px #0000000f;
           box-shadow: 0px 4px 4px #0000000f;
 }
@@ -1675,7 +1675,7 @@ ol {
 }
 
 .header.sticky .button .btn:hover {
-  background-color: #081828;
+  background-color: var(--secondary-color);
   color: #fff;
 }
 
@@ -1705,7 +1705,7 @@ ol {
 }
 
 .sticky .navbar .navbar-nav .nav-item a {
-  color: #081828;
+  color: var(--secondary-color);
 }
 
 .header .navbar .navbar-nav .nav-item .sub-menu a.active {
@@ -2071,7 +2071,7 @@ ol {
 }
 
 .hero-area .hero-content .button .btn:hover {
-  background-color: #081828;
+  background-color: var(--secondary-color);
   color: #fff;
 }
 
@@ -2100,7 +2100,7 @@ ol {
 
 .hero-area .hero-content .button .video-button:hover .video {
   color: #fff;
-  background-color: #081828;
+  background-color: var(--secondary-color);
 }
 
 .hero-area .hero-content .button .video-button .video {
@@ -2421,7 +2421,7 @@ ol {
   width: 100%;
   padding: 12px 30px;
   font-size: 13px;
-  background-color: #081828;
+  background-color: var(--secondary-color);
 }
 
 .pricing-table .single-table .table-head .button .btn:hover {
@@ -2533,7 +2533,7 @@ ol {
 
 .call-action .cta-content .button .btn:hover {
   color: #fff;
-  background-color: #081828;
+  background-color: var(--secondary-color);
 }
 
 /*======================================
@@ -2591,7 +2591,7 @@ ol {
 .error-area .error-content h2 {
   font-size: 25px;
   margin-bottom: 10px;
-  color: #081828;
+  color: var(--secondary-color);
   font-weight: 700;
 }
 
@@ -2617,7 +2617,7 @@ ol {
 	Footer CSS
 ========================================*/
 .footer {
-  background-color: #081828;
+  background-color: var(--secondary-color);
   position: relative;
 }
 
@@ -2971,4 +2971,182 @@ ol {
 .footer .footer-newsletter .newsletter-form .button .btn:hover {
   color: var(--primary-color);
   background-color: #fff;
+}
+
+
+.proj_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.proj_card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 300px;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+  background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.proj_card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to top, var(--secondary-color), rgba(0, 0, 0, 0));
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.proj_card:hover::after {
+  height: 100%;
+}
+
+.proj_card * {
+  position: relative;
+  z-index: 2;
+}
+
+.label {
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.proj_card:hover .label {
+  opacity: 1;
+}
+
+.subtext {
+  font-size: 20px;
+  opacity: 0;
+  position: absolute;
+  font-weight: 200;
+  top: 63%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in-out;
+  color: white;
+}
+
+.proj_card:hover .subtext {
+  opacity: 1;
+}
+
+.proj_image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.proj_card:hover .proj_image {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.proj_image img {
+  width: 170px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.proj_container h3 {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+
+}
+.proj_card:hover {
+  transform: scale(1.01);
+}
+
+.proj_container h2 {
+  margin-top: 0;
+  font-size: 70px;
+  margin-bottom: 10px;
+}
+.proj_podnadpis {
+  font-size: 20px;
+}
+
+.proj_container p a {
+  color: var(--primary-color);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease; /* Plynulá změna barvy */
+  font-weight: 900;
+}
+
+
+
+.proj_container p a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  bottom: 0px;
+  left: 50%;
+  transition: width 0.3s ease, left 0.3s ease; /* Plynulý efekt podtržení */
+}
+
+h2 {
+  color: var(--primary-color);
+  font-size: 60px;
+}
+.section-title h2 {
+  padding-top: 10px;
+  font-size: 50px;
+}
+.section-title .white {
+  color: white;
+}
+.white {
+  color: white;
+}
+.single-feature h3 {
+  color: var(--primary-color);
+}
+p {
+  color: rgb(48, 48, 48);
+}
+.our-achievement p {
+  color: white;
+}
+.our-achievement .btn {
+background-color: white;
+color: var(--primary-color);
 }
