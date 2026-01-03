@@ -153,6 +153,7 @@ h1 {
 
 h2 {
   font-size: 40px;
+  line-height: 1em;
 }
 
 h3 {
@@ -1070,7 +1071,6 @@ ol {
 .section-title h2 {
   font-size: 34px;
   margin-bottom: 25px;
-  line-height: 42px;
   text-transform: capitalize;
   position: relative;
   font-weight: 800;
@@ -1097,7 +1097,6 @@ ol {
   }
   .section-title h2 {
     font-size: 24px;
-    line-height: 32px;
     margin-bottom: 20px;
   }
   .section-title p {
@@ -1115,7 +1114,6 @@ ol {
   }
   .section-title h2 {
     font-size: 20px;
-    line-height: 30px;
     margin-bottom: 18px;
   }
   .section-title p {
