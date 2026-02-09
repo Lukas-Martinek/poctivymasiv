@@ -149,6 +149,7 @@ h6 a {
 
 h1 {
   font-size: 50px;
+  line-height: 1em;
 }
 
 h2 {
@@ -2038,7 +2039,6 @@ ol {
 .hero-area .hero-content h1 {
   font-size:160px;
   font-weight: 800;
-  line-height: 170px;
   color: #fff;
   text-shadow: 0px 3px 8px #00000017;
   text-transform: capitalize;
